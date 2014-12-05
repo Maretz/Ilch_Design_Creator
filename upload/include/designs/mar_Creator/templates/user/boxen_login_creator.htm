@@ -1,0 +1,21 @@
+<table align="center" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" valign="middle">
+<tr>
+<td style="text-align:right" valign="middle">{AVATAR}</td>
+<td width="10"></td>
+<td style="text-align:left">Hallo <b>{NAME}</b><br><br><a href="index.php?user-8">Profil editieren</a><br><a href="index.php?forum-privmsg">{NACHRICHTEN}</a><br><a  href="?search-aeit">Meine Beitr&auml;ge ({POSTS})</a><br><a  href="index.php?forum-augt">Neue Beitr&auml;ge <span style="color:#007F0E;">({LPOSTS})</span></a><br><br><a href="index.php?user-3"><b>Logout</a></b><br>{ADMIN}</td>
+</tr>
+</table>
+{EXPLODE}
+<table align="center" width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" valign="middle">
+<form method="POST">
+<tr>
+<td align="center">
+<input type="text" name="name" size="13" value="{NAME}" onFocus="if (value == '{NAME}') {value = ''}" onBlur="if (value == '') {value = '{NAME}'}" maxlength="15" style="margin-top:5px" /><br>
+<input type="password" size="13" value="{PASS}" onFocus="if (value == '{PASS}') {value = ''}" onBlur="if (value == '') {value = '{PASS}'}" maxlength="20" name="pass" style="margin-top:5px" /><br>
+<input type="hidden" name="wdlink" value="{wdlink}" />
+<input type="submit" name="user_login_sub" value="Login" style="margin-top:5px">
+<br><br>{regist}
+</td>
+</tr>
+</form>
+</table>

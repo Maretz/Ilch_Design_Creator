@@ -1,0 +1,333 @@
+/* Maretz.eu - Design Creator */
+
+html a 
+{
+text-decoration: none
+}
+html a:hover            
+{
+text-decoration: none
+}
+body                   
+{background-attachment:fixed;
+background-position: 50% 0%;
+background-repeat:no-repeat;
+margin: 0 auto;
+padding: 0
+}
+h3                     
+{
+text-decoration: none;
+letter-spacing:2px;
+margin-left:10px;
+margin-right:10px
+}
+.left                    
+{
+float: left
+}
+.right                   
+{
+float: right
+}
+.break                   
+{
+clear: both
+}
+div#site                 
+{margin: 0 auto;
+margin-top:30px
+}
+#abst                    
+{height:20px; 
+float:left;
+border: none
+}
+#body_site               
+{
+float:left;
+position: relative;
+padding:10px;
+}
+#body_site_trans 
+{
+position: absolute;
+top: 0;
+left: 0;
+height: 100%;
+width:100%;
+z-index:-1
+}
+#bg_head                
+{float:left;
+border: none
+}
+#bg_head_left            
+{float:left;
+border: none
+}
+#navigation              
+{
+float:left;
+height: 50px;
+text-align:left;
+margin-top:5px
+}
+#infopan
+{margin-top:5px;
+float:left;
+text-align:left
+}
+#footer
+{
+float:left;
+height:50px;
+overflow:hidden;
+text-align:center;
+line-height:50px
+}
+#bg_content
+{
+float:left;
+border: none;
+margin-top:5px
+}
+#linke_box, #rechte_box    
+{
+float: left
+}
+#menu_links_oben            
+{
+height: 30px;
+display:block;
+float:left;
+text-align:center;
+text-decoration:none;
+font-weight: bold;
+line-height:30px
+}
+#menu_links_mitte           
+{
+border: none;
+text-align:center;
+margin-bottom:10px
+}
+#content_bereich            
+{
+float: left;
+margin-left:6px;
+margin-right:5px;
+min-height:100px;
+margin-bottom:10px;
+}
+.box_in,
+.box_in2
+{
+float: left;
+padding-top: 5px;
+padding-left: 3px;
+padding-right: 3px;
+padding-bottom: 5px;
+overflow: hidden;
+text-align:center
+}
+.content_in 
+{
+float: left;
+padding-top: 5px;
+padding-left: 5px;
+padding-right: 5px;
+padding-bottom: 5px;
+overflow: hidden;
+text-align:left
+}
+#menu_rechts_oben 
+{
+height: 30px;
+display:block;
+font-weight: bold;
+text-decoration:none;
+float:left;
+text-align:center;
+line-height:30px                          
+}
+#menu_rechts_mitte     
+{
+text-align:center;
+margin-bottom:10px
+}
+#ddmenu 
+{
+margin:0 auto;
+padding:0;
+list-style:none;
+position:relative;
+z-index:500;
+top:3px;
+left:5px
+}
+#ddmenu li 
+{
+float:left;
+margin-left:4px
+}
+#ddmenu li:hover 
+{
+float:left;
+position:relative;
+z-index:200
+}
+#ddmenu li a 
+{
+display:block;
+text-align:center;
+height:35px;
+line-height:35px;
+text-decoration:none;
+padding:0 10px;
+font-weight: bold
+}
+#ddmenu :hover ul 
+{
+left:0;
+top:30px
+}
+#ddmenu ul,
+#ddmenu :hover ul ul 
+{
+position:absolute;
+left:-9999px;
+top:-9999px;
+width:0;
+height:0;
+margin:0;
+padding:0;
+list-style:none
+}
+#ddmenu :hover ul li 
+{
+margin:0;
+margin-left:-1px;
+padding:8px;
+-webkit-border-top-left-radius: 0px;
+-webkit-border-top-right-radius: 0px;
+-moz-border-radius-topleft: 0px;
+-moz-border-radius-topright: 0px;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+-webkit-box-shadow: 0px 0px 0px #000000;
+-moz-box-shadow: 0px 0px 0px #000000;
+box-shadow: 0px 0px 0px #000000
+}
+#ddmenu :hover ul li a 
+{
+text-decoration:none;
+padding:0;
+font-weight: normal
+}
+#inf_panel              
+{
+float:left;
+width: 32%;
+margin:0.5%;
+overflow:hidden
+}
+.verti_but 
+{
+display:block;
+width:98%;
+padding: 6px 0px 6px 0px;
+margin-bottom:2px;
+text-align:center;
+text-decoration: none
+}
+table 
+{
+max-width:100%;
+background-color:transparent;
+border-collapse:collapse;
+border-spacing:0
+}
+.border 
+{
+margin-bottom:20px;
+border-left:0
+}
+.border th,
+.border td 
+{
+padding:8px;
+text-align:left;
+vertical-align:center
+}
+.table thead th 
+{
+vertical-align:bottom
+}
+select ,
+textarea, 
+input 
+{
+font-weight: normal;
+text-decoration: none
+}
+input[type=submit],
+input[type=button],
+button[type=submit],
+button             
+{
+font-weight: normal;
+text-decoration: none
+}
+select,
+textarea,
+input,
+input[type=text],
+input[type=password],
+textarea 
+{
+-webkit-transition:all .3s ease-in-out;
+-moz-transition:all .3s ease-in-out;
+-ms-transition:all .3s ease-in-out;
+-o-transition:all .3s ease-in-out;
+outline:none;
+padding:3px 0 3px 3px;
+margin:5px 1px 3px 0;
+overflow:auto
+}
+input[type=submit],
+input[type=button],
+button[type=submit],
+button
+{
+-webkit-transition:all .3s ease-in-out;
+-moz-transition:all .3s ease-in-out;
+-ms-transition:all .3s ease-in-out;
+-o-transition:all .3s ease-in-out;
+outline:none;
+padding:3px 0 3px 3px;
+margin:5px 1px 3px 0
+}
+select:hover,
+select:focus,
+input:hover,
+input:focus,
+input[type=text]:focus,
+input[type=password]:focus,
+textarea:focus,
+input[type=password]:hover,
+input[type=text]:hover,
+textarea:hover 
+{
+padding:3px 0 3px 3px;
+margin:5px 1px 3px 0
+}
+input[type=submit]:hover,
+input[type=submit]:focus,
+button[type=submit]:hover,
+button[type=submit]:hover,
+button:hover 
+{
+padding:3px 0 3px 3px;
+margin:5px 1px 3px 0
+}

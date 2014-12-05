@@ -1,0 +1,456 @@
+<script type="text/javascript">
+function chkform () {
+  for (i = 0; i < document.forms[0].elements.length; ++i)
+    if (document.forms[0].elements[i].value == "") {
+      alert("Es wurden nicht alle Felder ausgefuellt!");
+      document.forms[0].elements[i].focus();
+      return false;
+    }
+  return true;
+}
+</script>
+<style type="text/css" media="screen">
+label {display:inline-block;width:53px;padding-left:3px;text-align:left}
+label2 {display:inline-block;width:100px;padding-left:3px;text-align:left}
+.label_up {line-height:23px}
+.infcolor {color:#FF0000;font-size:10px}
+.menuvbutton, .menuvbutton:hover {diplay:block;border:1px solid #003366;background:#EFEFEF;color:#141414;padding:5px;text-decoration:none;margin:3px;}
+legend {border-bottom: 2px solid #000;margin-bottom:15px;}
+h1  small {font-size:12px;}
+</style>
+{Message}{Messages}
+<table width="98%" cellpadding="0" cellspacing="0" border="0" style="margin-left:1%"><tr><td><legend><img src="include/images/icons/admin/dc.png" height="30" style="float:left;margin-left:10px;margin-right:10px;"><h1>Design Creator v.1.0 <small><a href="http://www.maretz.eu" target="_blank" title="Maretz.eu - Free Ilch Templates">by Maretz.eu</a></small></h1></legend></td></tr></table>
+<table cellpadding="0" cellspacing="0" border="0"  width="100%" align="center">
+<td width="55%" style="min-width:470px" valign="top">
+			<form action="admin.php?designcreator" method="POST" name="form" onsubmit="return chkform()">
+<table width="95%" border="0" cellpadding="3" cellspacing="1" class="border" align="center">
+			 	<tr class="Cdark">
+					<td colspan="2"><b>Grundeinstellungen</b></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Breite des Designs<br><small>> Empfehlung 970 - 1150 px</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="BreiteDesign" value="{BreiteDesign}" value maxlength="4" size="6"> px</td>
+				</tr>
+				</tr>
+					<td width="40%" class="Cmite">Men&uuml; Breite<br><small>> Breite der Boxen Links / Rechts<br></small></td>
+					<td width="60%" class="Cnorm label_up"><label2>linkes Men&uuml;</label2><input type="text" name="MenuBreite" value="{MenuBreite}" value maxlength="3" size="4"> px<br><label2>rechtes Men&uuml;</label2><input type="text" name="MenuBreite2" value="{MenuBreite2}" value maxlength="3" size="4"> px</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Schrift-Farbe<br><small>> Standart Schriftfarbe und Gr&ouml;&szlig;e</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="FarbeHTML" value="{FarbeHTML}"  value maxlength="7" size="10"> <input type="text" name="SizeHTML" value="{SizeHTML}"  value maxlength="2" size="3"> px</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Link Schrift Farbe<br><small>> Farbe für Links und im Mouseover</small></td>
+					<td width="60%" class="Cnorm label_up"><label>Normal</label><input type="text" name="aHTML" value="{aHTML}" value maxlength="7" size="10"><br><label>Hover</label><input type="text" name="aHoverHTML" value="{aHoverHTML}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Schrift-Typ<br><small>> Schrifttyp</small></td>
+					<td width="60%" class="Cnorm"><select name="FontHTML">
+					<option value="Verdana, Arial, Helvetica, Times, Georgia, Comic Sans MS" {Selectedverdana}>Verdana</option>
+					<option value="Arial, Verdana, Helvetica, Times, Georgia, Comic Sans MS" {Selectedarial}>Arial</option>
+					<option value="Comic Sans MS, Verdana, Arial, Helvetica, Times, Georgia" {Selectedcomic}>Comic</option>
+					<option value="Times, Helvetica, Georgia, Comic Sans MS, Verdana, Arial" {Selectedtimes}>Times</option>
+					<option value="Helvetica, Times, Georgia, Comic Sans MS, Verdana, Arial" {Selectedhelvetica}>Helvetica</option>
+					<option value="Georgia, Times, Helvetica, Comic Sans MS, Verdana, Arial" {Selectedgeorgia}>Georgia</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Background Color<br><small>> Background Farbe der Seite</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="FarbeBODY" value="{FarbeBODY}"  value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Background Image<br><small>> URL oder int. Pfad zum Bild</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="IMGBODY" value="{IMGBODY}"  size="50"><br><small>Bsp.: http://meinbild.jpg oder include/images/background.jpg</small></td>
+				</tr>
+				<tr class="Cdark">
+					<td colspan="2"><b>Rahmen des Design</b></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Background Farbe<br><small>> Hintergrundfarbe mit Farbverlauf vertikal</small></td>
+					<td width="60%" class="Cnorm">von <input type="text" name="RahmenVon" value="{RahmenVon}" value maxlength="7" size="10"> zu <input type="text" name="RahmenBis" value="{RahmenBis}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Background Opacity<br><small>> Hintergrundfarbe Transparent</small></td>
+					<td width="60%" class="Cnorm"><select name="DC_Opacity">
+					<option value="0" {Selectedop0}>0</option>
+					<option value="10" {Selectedop10}>10</option>
+					<option value="20" {Selectedop20}>20</option>
+					<option value="30" {Selectedop30}>30</option>
+					<option value="40" {Selectedop40}>40</option>
+					<option value="50" {Selectedop50}>50</option>
+					<option value="60" {Selectedop60}>60</option>
+					<option value="70" {Selectedop70}>70</option>
+					<option value="80" {Selectedop80}>80</option>
+					<option value="90" {Selectedop90}>90</option>
+					<option value="99" {Selectedop100}>100</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Border Rahmen<br><small>> Border Color und Radius</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="R_Color" value="{R_Color}" value maxlength="7" size="10"><label>Radius</label><input type="text" name="R_Radius" value="{R_Radius}" value maxlength="2" size="3"> px</td>
+				</tr>
+				</tr>
+					<td width="40%" class="Cmite">Rahmen Schatten anzeigen?<br><small>> Box Shadow Rahmen / Farbe</small></td>
+					<td width="60%" class="Cnorm label_up"><input type="radio" value="0px -2px 10px 2px" name="R_Schatten" {Selectedrschatten_on}> Ja <input type="radio" value="0px 0px 0px 0px" name="R_Schatten" {Selectedrschatten_off}> Nein<br>
+          <label>Farbe</label><input type="text" name="R_SchattenC" value="{R_SchattenC}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr class="Cdark">
+					<td colspan="2"><b>Header Bereich</b></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Header Image anzeigen?<br><small>> Header Url oder int. Pfad<br><span class="infcolor">( Header-Ma&szlig; mind. {BreiteDesignHeader}px <b>x</b> {HeaderHigh}px ! )</span></small></td>
+					<td width="60%" class="Cnorm label_up"><input type="radio" value="header" name="Header" {Selectedheader_on}> Ja <input type="radio" value="null" name="Header" {Selectedheader_off}> Nein<br><input type="text" name="IMGHeader" value="{IMGHeader}"  size="50"><br><small>Bsp.: http://meinbild.jpg oder include/images/header.jpg</small></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">H&ouml;he Headerbereich<br><small>> H&ouml;he des Headerbereiches</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="HeaderHigh" value="{HeaderHigh}"  value maxlength="3" size="4"> px</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Seitenname im Header anzeigen?<br><small>> Seitenname im Header</small></td>
+					<td width="60%" class="Cnorm label_up"><input type="radio" value="block" name="SeitenName" {Selectedname_on}> Ja <input type="radio" value="none" name="SeitenName" {Selectedname_off}> Nein<br><label2>FontColor</label2><input type="text" name="SeitenNameC" value="{SeitenNameC}"  value maxlength="7" size="10"><br><label2>FontSize</label2><input type="text" name="SeitenNameS" value="{SeitenNameS}"  value maxlength="2" size="3"> px</td>
+          </tr>
+          <tr>
+         <td width="40%" class="Cmite">Ausrichtung Seitenname<br><small>> Seitenname Position</small></td>
+         <td width="60%" class="Cnorm"><select name="SeitenNameP">
+					<option value="left" {Selectednameleft}>Links</option>
+					<option value="center" {Selectednamecenter}>Mitte</option>
+					<option value="right" {Selectednameright}>Rechts</option>
+					</select></td>
+				</tr>
+				<tr class="Cdark">
+					<td colspan="2"><b>Einstellungen Design</b></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">BG-Color Boxen<br><small>> Hintergrundfarben der Boxen mit Farbverlauf vertikal</small></td>
+					<td width="60%" class="Cnorm">von <input type="text" name="BoxColorV" value="{BoxColorV}" value maxlength="7" size="10"> zu <input type="text" name="BoxColorZ" value="{BoxColorZ}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">BG-Color Content<br><small>> BG-Farbe des ContentBereiches</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="BGContent" value="{BGContent}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Box-Schatten anzeigen ?<br><small>> Box Shadow</small></td>
+					<td width="60%" class="Cnorm label_up"><input type="radio" value="0px -7px 7px -2px" name="BoxSchatten" {Selectedboxshadow_on}> Ja <input type="radio" value="0px 0px 0px 0px" name="BoxSchatten" {Selectedboxshadow_off}> Nein<br><label>Farbe</label><input type="text" name="BoxSchattenC" value="{BoxSchattenC}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Men&uuml; Benennung Links/Rechts<br><small>> Name des Men&uuml;s - Hintergrund und Size</small></td>
+					<td width="60%" class="Cnorm label_up"><label2>Background</label2><input type="text" name="MenuTopColor" value="{MenuTopColor}" value maxlength="7" size="10"><br><label2>FontColor</label2><input type="text" name="MenuTopColorFont" value="{MenuTopColorFont}" value maxlength="7" size="10"><br><label2>FontSize</label2><input type="text" name="MenuTopSize" value="{MenuTopSize}" value maxlength="2" size="3"> px</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Border<br><small>> Border Color und Radius</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="BoxBorder" value="{BoxBorder}" value maxlength="7" size="10"> <label>Radius</label><input type="text" name="BoxRadius" value="{BoxRadius}" value maxlength="2" size="3"> px</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite" style="background:#BADCFF">Infopanel anzeigen?<br><small>> LastNews, Lastforum ... Panel</small></td>
+					<td width="60%" class="Cnorm" style="background:#DDEEFF"><input type="radio" value="inline" name="InfoP" {Selectedinfo_on}> Ja <input type="radio" value="none" name="InfoP" {Selectedinfo_off}> Nein</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite" style="background:#BADCFF">H&ouml;he Infopanel<br><small>> Box-H&ouml;he der LastNews, LastForum ...</small></td>
+					<td width="60%" class="Cnorm" style="background:#DDEEFF"><input type="text" name="Hinf" value="{Hinf}" value maxlength="3" size="3"> px</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite" style="background:#BADCFF">Anzahl Zeichen<br><small>> max. Anzahl Zeichen LastNews, LastForum</small></td>
+					<td width="60%" class="Cnorm" style="background:#DDEEFF">max. <input type="text" name="ZZ" value="{ZZ}" value maxlength="3" size="3"> Zeichen</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">H-Men&uuml; anzeigen?<br><small>> H-Men&uuml; oberhalb des Content</small></td>
+					<td width="60%" class="Cnorm"><input type="radio" value="inline" name="HMENUE" {SelectedHmenu_on}> Ja <input type="radio" value="none" name="HMENUE" {SelectedHmenu_off}> Nein</td>
+				</tr>
+				<tr class="Cdark">
+					<td colspan="2" height="30"><b>Einstellungen DropDown Men&uuml;</b>  <a class="menuvbutton" href="admin.php?menu-6">>> zur Verwaltung der Men&uuml;eintr&auml;ge <<</a></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Navigation anzeigen?<br><small>> NaviPanel ein-, ausblenden</small></td>
+					<td width="60%" class="Cnorm"><input type="radio" value="inline" name="Navi" {Selectednavi_on}> Ja <input type="radio" value="none" name="Navi" {Selectednavi_off}> Nein</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Background Color<br><small>> BG-Color mit Farbverlauf vertikal</small></td>
+					<td width="60%" class="Cnorm">von <input type="text" name="DDvon" value="{DDvon}" value maxlength="7" size="10"> zu <input type="text" name="DDzu" value="{DDzu}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Border<br><small>> Border Color</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="DDBorder" value="{DDBorder}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Men&uuml; Name<br><small>> Farbe Name und Gr&ouml;&szlig;e</small></td>
+					<td width="60%" class="Cnorm label_up"><label>Normal</label><input type="text" name="DDName" value="{DDName}" value maxlength="7" size="10"><br><label>Hover</label><input type="text" name="DDNameA" value="{DDNameA}" value maxlength="7" size="10"><br><label>Size</label><input type="text" name="DDNameSize" value="{DDNameSize}" value maxlength="2" size="3"> px</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Link Schrift Farbe<br><small>> Farbe für Links und im Mouseover</small></td>
+					<td width="60%" class="Cnorm label_up"><label>Normal</label><input type="text" name="DDLink" value="{DDLink}" value maxlength="7" size="10"><br><label>Hover</label><input type="text" name="DDLinkA" value="{DDLinkA}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr class="Cdark">
+					<td colspan="2" ><b>Men&uuml; Buttons</b> <small>vertikale Men&uuml;buttons</small></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Normal<br><small>> Normalzustand Farbgebung ( u.a Farbverlauf, FontColor .. )</small></td>
+					<td width="60%" class="Cnorm label_up">von <input type="text" name="VButA" value="{VButA}" value maxlength="7" size="10"> zu <input type="text" name="VButAH" value="{VButAH}" value maxlength="7" size="10"><br><label2>FontColor</label2><input type="text" name="VButFont" value="{VButFont}" value maxlength="7" size="10"><br><label2>BorderColor</label2><input type="text" name="VButBorder" value="{VButBorder}" value maxlength="7" size="10"><br><label2>Radius</label2><input type="text" name="VButBorderR" value="{VButBorderR}" value maxlength="2" size="3"> px</td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Hover<br><small>> Mouseover Farbgebung ( u.a Farbverlauf .. )</small></td>
+					<td width="60%" class="Cnorm label_up">von <input type="text" name="VButB" value="{VButB}" value maxlength="7" size="10"> zu <input type="text" name="VButBH" value="{VButBH}" value maxlength="7" size="10"><br><label2>FontColor</label2><input type="text" name="VButFontA" value="{VButFontA}" value maxlength="7" size="10"><br><label2>BorderColor</label2><input type="text" name="VButBorderA" value="{VButBorderA}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr class="Cdark">
+					<td colspan="2" ><b>Darstellung Tabellen / Formulare</b> <small>Tabellen Forum, User ....</small></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Table Border<br><small>> Border Farbe Tabellen</small></td>
+					<td width="60%" class="Cnorm"><input type="text" name="TB" value="{TB}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Table Top (Chead)<br><small>> Tabellen Kopf mit Farbverlauf</small></td>
+					<td width="60%" class="Cnorm label_up">von <input type="text" name="TBK" value="{TBK}" value maxlength="7" size="10"> zu <input type="text" name="TBKa" value="{TBKa}" value maxlength="7" size="10"><br><label2>FontColor</label2><input type="text" name="TBKFont" value="{TBKFont}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Table Top In (Cdark)<br><small>> Tabellen Kopf innerhalb der Tabelle</small></td>
+					<td width="60%" class="Cnorm label_up">von <input type="text" name="TBKI" value="{TBKI}" value maxlength="7" size="10"> zu <input type="text" name="TBKIa" value="{TBKIa}" value maxlength="7" size="10"><br><label2>FontColor</label2><input type="text" name="TBKIFont" value="{TBKIFont}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Table In<br><small>> Inhalt Tabelle (Gestreifte Zeilen m&ouml;glich)</small></td>
+					<td width="60%" class="Cnorm label_up">1 <input type="text" name="TBin" value="{TBin}" value maxlength="7" size="10"> FontColor <input type="text" name="TBinColor" value="{TBinColor}" value maxlength="7" size="10"><br>2 <input type="text" name="TBina" value="{TBina}" value maxlength="7" size="10"> FontColor <input type="text" name="TBinaColor" value="{TBinaColor}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Input Textarea<br><small>> Eingabe Felder<br><span class="infcolor" title="B-Radius wie bei Einstellungen Design">( B-Radius wie bei "Einstellungen Design" )</span></small></td>
+					<td width="60%" class="Cnorm label_up"><label2>Background</label2><input type="text" name="TXC" value="{TXC}" value maxlength="7" size="10"><br><label2>FontColor</label2><input type="text" name="TXCF" value="{TXCF}" value maxlength="7" size="10"><br><label2>BorderColor</label2><input type="text" name="TXB" value="{TXB}" value maxlength="7" size="10"><br><label2>Border:Hover</label2><input type="text" name="TXBA" value="{TXBA}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr>
+					<td width="40%" class="Cmite">Formular Button<br><small>> Formular Button<br><span class="infcolor" title="B-Radius wie Men&uuml; Button´s">( B-Radius wie Men&uuml; Button´s )</span></small></td>
+					<td width="60%" class="Cnorm label_up"><label2>Background</label2><input type="text" name="BC" value="{BC}" value maxlength="7" size="10"><br><label2>FontColor</label2><input type="text" name="BCF" value="{BCF}" value maxlength="7" size="10"><br><label2>BorderColor</label2><input type="text" name="BB" value="{BB}" value maxlength="7" size="10"><br><label2>Border:Hover</label2><input type="text" name="BBA" value="{BBA}" value maxlength="7" size="10"></td>
+				</tr>
+				<tr class="Cdark">
+					<td colspan="2" height="30" style="text-align:center"><input type="submit" value="Einstellungen &uuml;bernehmen" name="Submit_Designcreator" ></td>
+				</tr>
+</table>
+			</form>
+</td><td width="45%" style="min-width:400px" valign="top">
+<form action="admin.php?designcreator" method="POST" name="form">
+<table width="95%" border="0" cellpadding="3" cellspacing="1" class="border" align="center">
+			 	<tr class="Cdark">
+					<td colspan="2"><b>Vorschau Design <small>(ohne Grafiken)</small></b><span style="float:right">BG Farbe Vorschau <input type="text" name="VorschauBG" value="{VorschauBG}" value maxlength="7" size="9"> <input type="submit" value="OK" name="Submit_VorschauBG" ></td>
+				</tr>
+				<tr>
+					<td valign="top" style="Background:{VorschauBG};color:{FarbeHTML};height:840px;min-height:840px;font-size:{SizeHTML}px;font-family:{FontHTML}">
+
+<div style="margin: 0 auto;">
+<div style="width: 90%;margin:4%;border: solid {R_Color} 1px;float:left;position: relative;padding:5px;-webkit-border-radius: {R_Radius}px;-moz-border-radius: {R_Radius}px;border-radius: {R_Radius}px;
+-webkit-box-shadow: {R_Schatten} {R_SchattenC};-moz-box-shadow: {R_Schatten} {R_SchattenC}; box-shadow: {R_Schatten} {R_SchattenC};background-image: linear-gradient({RahmenVon}, {RahmenBis});">
+
+<div id="bg_head" style="float:left;border: none;width: 100%;">
+<div id="bg_head_left" style="float:left;background-image: linear-gradient({BoxColorV}, {BoxColorZ});height:100px;line-height:50px;width: 100%;text-align:{SeitenNameP};border: solid {BoxBorder} 1px;
+-webkit-border-bottom-right-radius: {BoxRadius}px;
+-webkit-border-bottom-left-radius: {BoxRadius}px;
+-moz-border-radius-bottomright: {BoxRadius}px;
+-moz-border-radius-bottomleft: {BoxRadius}px;
+border-bottom-right-radius: {BoxRadius}px;
+border-bottom-left-radius: {BoxRadius}px;
+-webkit-border-top-left-radius: {R_Radius}px;-moz-border-radius-topleft: {R_Radius}px;border-top-left-radius: {R_Radius}px;
+-webkit-border-top-right-radius: {R_Radius}px;-moz-border-radius-topright: {R_Radius}px;border-top-right-radius: {R_Radius}px;
+-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC}; box-shadow: {BoxSchatten} {BoxSchattenC};">
+<h3 style="display:{SeitenName};color:{SeitenNameC};font-size:28px;margin-left:10px;margin-right:10px;font-family:{FontHTML}">Seitenname</h3></div>
+<span style="display:{Navi}"><div style="float:left;width: 98%;padding:1%;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+background-image: linear-gradient({BoxColorV}, {BoxColorZ});border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};margin-top:5px;font-family:{FontHTML};color:{DDName};font-size:{DDNameSize}px;" >
+DropDown Men&uuml  ....</div></span>
+<span style="display:{InfoP}"><div style="float:left;width: 98%;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+background-image: linear-gradient({BoxColorV}, {BoxColorZ});border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};margin-top:5px;padding-left:2%;">
+<div id="inf_panel" style="float:left;width: 29%;margin:0.5%;padding:1%;height:100px;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+background-image: linear-gradient({BoxColorV}, {BoxColorZ});border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};margin-top:5px;font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;text-align:center;">Inhalt InfoPanel</div>
+<div id="inf_panel" style="float:left;width: 29%;margin:0.5%;padding:1%;height:100px;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+background-image: linear-gradient({BoxColorV}, {BoxColorZ});border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};margin-top:5px;font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;text-align:center;">Inhalt InfoPanel</div>
+<div id="inf_panel" style="float:left;width: 29%;margin:0.5%;padding:1%;height:100px;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+background-image: linear-gradient({BoxColorV}, {BoxColorZ});border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};margin-top:5px;font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;text-align:center;">Inhalt InfoPanel</div>
+</div></span>
+<div style="float:left;width: 99%;padding-left:0.5%;">
+<div style="float:left;width: 19%;">
+<div style="color: {MenuTopColorFont};font-family:{FontHTML};font-size:{MenuTopSize}px;background-color:{MenuTopColor};margin-top:7px;
+border: solid {BoxBorder} 1px;
+border-bottom:0px groove {BoxBorder};
+-webkit-border-top-left-radius: {BoxRadius}px;
+-webkit-border-top-right-radius: {BoxRadius}px;
+-moz-border-radius-topleft: {BoxRadius}px;
+-moz-border-radius-topright: {BoxRadius}px;
+border-top-left-radius: {BoxRadius}px;
+border-top-right-radius: {BoxRadius}px;
+-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};text-align:center;height:30px;line-height:30px;"
+>M-Name</div>
+<div style="font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;
+border: solid {BoxBorder} 1px;border-top:0px solid #CCC;
+-webkit-border-bottom-right-radius: {BoxRadius}px;
+-webkit-border-bottom-left-radius: {BoxRadius}px;
+-moz-border-radius-bottomright: {BoxRadius}px;
+-moz-border-radius-bottomleft: {BoxRadius}px;
+border-bottom-right-radius: {BoxRadius}px;
+border-bottom-left-radius: {BoxRadius}px;text-align:center;height:80px;background-image: linear-gradient(90deg, {BoxColorZ}, {BoxColorV});padding-top:5px;">Inhalt Links</div></div>
+<div style="float:left;width: 59%;margin-left:1%;background:{BGContent};height:400px;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};margin-top:7px;font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;"><span style="display:{HMENUE};margin-top:5px;font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;">&nbsp;Home&nbsp;&raquo;&nbsp;HMENU<br><br></span>&nbsp;Contentbereich</div>
+<div style="float:right;width: 19%;">
+<div style="color: {MenuTopColorFont};font-family:{FontHTML};font-size:{MenuTopSize}px;background-color:{MenuTopColor};margin-top:7px;
+border: solid {BoxBorder} 1px;
+border-bottom:0px groove {BoxBorder};
+-webkit-border-top-left-radius: {BoxRadius}px;
+-webkit-border-top-right-radius: {BoxRadius}px;
+-moz-border-radius-topleft: {BoxRadius}px;
+-moz-border-radius-topright: {BoxRadius}px;
+border-top-left-radius: {BoxRadius}px;
+border-top-right-radius: {BoxRadius}px;
+-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};text-align:center;height:30px;line-height:30px;">M-Name</div>
+<div style="font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;
+border: solid {BoxBorder} 1px;border-top:0px solid #CCC;
+-webkit-border-bottom-right-radius: {BoxRadius}px;
+-webkit-border-bottom-left-radius: {BoxRadius}px;
+-moz-border-radius-bottomright: {BoxRadius}px;
+-moz-border-radius-bottomleft: {BoxRadius}px;
+border-bottom-right-radius: {BoxRadius}px;
+border-bottom-left-radius: {BoxRadius}px;text-align:center;height:80px;background-image: linear-gradient(90deg, {BoxColorV}, {BoxColorZ});padding-top:5px;">Inhalt Rechts</div>
+<div style="color: {MenuTopColorFont};font-size:{MenuTopSize}px;font-family:{FontHTML};background-color:{MenuTopColor};margin-top:7px;
+border: solid {BoxBorder} 1px;
+border-bottom:0px groove {BoxBorder};
+-webkit-border-top-left-radius: {BoxRadius}px;
+-webkit-border-top-right-radius: {BoxRadius}px;
+-moz-border-radius-topleft: {BoxRadius}px;
+-moz-border-radius-topright: {BoxRadius}px;
+border-top-left-radius: {BoxRadius}px;
+border-top-right-radius: {BoxRadius}px;
+-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};text-align:center;height:30px;line-height:30px;">M-Name</div>
+<div style="font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;
+border: solid {BoxBorder} 1px;border-top:0px solid #CCC;
+-webkit-border-bottom-right-radius: {BoxRadius}px;
+-webkit-border-bottom-left-radius: {BoxRadius}px;
+-moz-border-radius-bottomright: {BoxRadius}px;
+-moz-border-radius-bottomleft: {BoxRadius}px;
+border-bottom-right-radius: {BoxRadius}px;
+border-bottom-left-radius: {BoxRadius}px;text-align:center;height:80px;background-image: linear-gradient(90deg, {BoxColorV}, {BoxColorZ});padding-top:5px;">Inhalt Rechts</div>
+</div>
+</div>
+<div id="footer" style="float:left;background-image: linear-gradient({BoxColorV}, {BoxColorZ});height:52px;line-height:52px;width: 100%;text-align:center;border: solid {BoxBorder} 1px;
+-webkit-border-top-right-radius: {BoxRadius}px;
+-webkit-border-top-left-radius: {BoxRadius}px;
+-moz-border-radius-topright: {BoxRadius}px;
+-moz-border-radius-topleft: {BoxRadius}px;
+border-top-right-radius: {BoxRadius}px;
+border-top-left-radius: {BoxRadius}px;
+-webkit-border-bottom-left-radius: {R_Radius}px;-moz-border-radius-bottomleft: {R_Radius}px;border-bottom-left-radius: {R_Radius}px;font-size:{SizeHTML}px;
+-webkit-border-bottom-right-radius: {R_Radius}px;-moz-border-radius-bottomright: {R_Radius}px;border-bottom-right-radius: {R_Radius}px;font-family:{FontHTML};
+-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC}; box-shadow: {BoxSchatten} {BoxSchattenC};margin-top:6px;">All Right by Name</div>
+</div>
+</td>
+				</tr>
+<tr><td class="Cmite" style="text-align:center;height:25px;line-height:25px"><b>Die Vorschau dient lediglich zur Ansicht der Farbdarstellung.Ma&szlig;angaben stimmen nicht &uuml;berein!</b></td></tr>
+</table>
+<table width="95%" border="0" cellpadding="3" cellspacing="1" class="border" align="center" style="margin-top:295px">
+			 	<tr class="Cdark">
+					<td colspan="2"><b>Vorschau DropDown Men&uuml;</b></td>
+				</tr>
+				<tr>
+					<td valign="top" align="center" style="Background:{VorschauBG};color:{FarbeHTML};height:240px;min-height:240px;">
+<br><br><div style="width: 350px;height:40px;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+background-image: linear-gradient({BoxColorV}, {BoxColorZ});border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};text-align:left;padding-left:35px;color:{DDName};font-family:{FontHTML};font-size:14px;">
+<b style="line-height:40px">DD Normal</b>
+<div style="position:relative;height:100px;width:150px;top:-36px;left:120px;background-image: linear-gradient( {DDvon}, {DDzu});border: solid {DDBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;text-align:center;color:{DDNameA};font-family:{FontHTML};padding-top:8px;font-size:14px;">
+<b>DD Hover</b><br><br><span style="line-height:20px;"><font style="font-family:{FontHTML};color:{DDLink};font-size:12px;">Link Normal</font><br><font style="font-family:{FontHTML};color:{DDLinkA};font-size:12px;">Link Hover</font></span>
+</div>
+</div>
+</td></tr>
+</table>
+<table width="95%" border="0" cellpadding="3" cellspacing="1" class="border" align="center" style="margin-top:12px">
+			 	<tr class="Cdark">
+					<td colspan="2"><b>Vorschau Men&uuml; Buttons</b></td>
+        </tr>
+				<tr>
+					<td width="100%" valign="top" align="center" style="Background:{VorschauBG};color:{FarbeHTML};height:150px;min-height:150px;font-size:{SizeHTML}px;font-family:{FontHTML}">
+
+<div style="width: 180px;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+background-image: linear-gradient(90deg, {BoxColorZ}, {BoxColorV});border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};padding:20px;margin-top:20px;">
+
+<div style="display:inline-block;width:170px;padding-top:6px;padding-bottom:6px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC}; box-shadow: {BoxSchatten} {BoxSchattenC};text-align:center;
+background-image: linear-gradient({VButA}, {VButAH});border: solid {VButBorder} 1px;color:{VButFont};font-size:{SizeHTML}px;font-family:{FontHTML};-webkit-border-radius: {VButBorderR}px;-moz-border-radius: {VButBorderR}px;border-radius: {VButBorderR}px;">
+Normal
+</div>
+<div style="display:inline-block;width:170px;padding-top:6px;padding-bottom:6px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC}; box-shadow: {BoxSchatten} {BoxSchattenC};text-align:center;margin-top:4px;
+background-image: linear-gradient({VButB}, {VButBH});border: solid {VButBorderA} 1px;color:{VButFontA};font-size:{SizeHTML}px;font-family:{FontHTML};-webkit-border-radius: {VButBorderR}px;-moz-border-radius: {VButBorderR}px;border-radius: {VButBorderR}px;">
+Hover
+</div>
+</div>
+</td></tr>
+</table>
+<table width="95%" border="0" cellpadding="3" cellspacing="1" class="border" align="center" style="margin-top:17px">
+			 	<tr class="Cdark">
+					<td colspan="2"><b>Vorschau Tabellen Elemente</b></td>
+				</tr>
+				<tr>
+					<td valign="top" align="center" style="Background:{VorschauBG};color:{FarbeHTML};height:350px;min-height:350px;font-size:{SizeHTML}px;font-family:{FontHTML}">
+<br><div style="width: 350px;background:{BGContent};padding:7px;-webkit-border-radius: {BoxRadius}px;-moz-border-radius: {BoxRadius}px;border-radius: {BoxRadius}px;
+border: solid {BoxBorder} 1px;-webkit-box-shadow: {BoxSchatten} {BoxSchattenC};-moz-box-shadow: {BoxSchatten} {BoxSchattenC};
+box-shadow: {BoxSchatten} {BoxSchattenC};margin-top:7px;font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;">
+<table width="100%" cellpadding="3" cellspacing="1" style="font-family:{FontHTML};color:{FarbeHTML};font-size:{SizeHTML}px;border: solid {TB} 1px;background:{TB}">
+  <tr style="background-image: linear-gradient({TBK}, {TBKa});color:{TBKFont};font-family:{FontHTML};"> 
+    <th colspan="3"><b>Table Top</b></th>
+  </tr><tr>
+    <td style="background:{TBin};font-family:{FontHTML};color:{TBinColor}" width="30%">1</td>
+    <td style="background:{TBina};font-family:{FontHTML};color:{TBinaColor}" width="40%">2</td>
+    <td style="background:{TBin};font-family:{FontHTML};color:{TBinColor}" width="30%" rowspan="11" valign="top" align="center">Text
+		</td>
+  </tr><tr>
+    <td style="background:{TBin};font-family:{FontHTML};color:{TBinColor}">Text</td>
+    <td style="background:{TBina};font-family:{FontHTML};color:{TBinaColor}">Text</td>
+  </tr><tr>
+    <td style="background:{TBin};font-family:{FontHTML};color:{TBinColor}">Text</td>
+    <td style="background:{TBina};font-family:{FontHTML};color:{TBinaColor}">Text</td>
+  </tr><tr>
+    <td style="background:{TBin};font-family:{FontHTML};color:{TBinColor}">Text</td>
+    <td style="background:{TBina};font-family:{FontHTML};color:{TBinaColor}">Text</td>
+  </tr><tr style="font-family:{FontHTML};background-image: linear-gradient({TBKI}, {TBKIa});color:{TBKIFont}"><th colspan="2">Table Top In</th></tr>
+	    <td style="background:{TBin};font-family:{FontHTML};color:{TBinColor}">Text</td>
+    <td style="background:{TBina};font-family:{FontHTML};color:{TBinaColor}">Text</td>
+  </tr><tr>
+    <td style="background:{TBin};font-family:{FontHTML};color:{TBinColor}">Text</td>
+    <td style="background:{TBina};font-family:{FontHTML};color:{TBinaColor}">Text</td>
+  </tr>
+</table>
+	<br>
+<input type="text" value="input Normal" size="14" style="background:{TXC};padding:4px;color: {TXCF};
+border:1px solid {TXB};
+-webkit-border-radius: {BoxRadius}px;
+-moz-border-radius: {BoxRadius}px;
+border-radius: {BoxRadius}px;font-family:{FontHTML};" readonly>&nbsp;&nbsp;&nbsp;<input type="text" value="input Hover" size="14" style="background:{TXC};padding:4px;color: {TXCF};
+border:1px solid {TXBA};
+-webkit-border-radius: {BoxRadius}px;
+-moz-border-radius: {BoxRadius}px;
+border-radius: {BoxRadius}px;box-shadow:0 0 5px {TXBA};font-family:{FontHTML};" readonly>
+<br><br>
+<button  style="background:{BC};padding:4px;color: {BCF};
+border:1px solid {BB};
+-webkit-border-radius: {VButBorderR}px;
+-moz-border-radius: {VButBorderR}px;
+border-radius: {VButBorderR}px;font-family:{FontHTML};">Button Normal</button>&nbsp;&nbsp;&nbsp;<button style="background:{BC};padding:4px;color: {BCF};
+border:1px solid {BBA};box-shadow:0 0 5px {BBA};
+-webkit-border-radius: {VButBorderR}px;
+-moz-border-radius: {VButBorderR}px;
+border-radius: {VButBorderR}px;font-family:{FontHTML};">Button Hover</button>
+</div>
+</td></tr>
+</table>
+</form></td>
+</table>
+<table width="98%" cellpadding="3" cellspacing="1" border="0" align="center" style="margin-left:1%"><tr>
+<td align="center"><div class="info_box" style="width:93%;text-align:left;">
+				<b>Information zum Design Creator</b>
+				<br />
+				<span class="smalfont">
+				Die Headergrafik variiert je nach den Einstellung des Design´s mit den Ma&szlig;en. Unter <b>"Header Bereich"</b> Kannst du sehen (in roter Schrift) wie gro&szlig; die Headergrafik aktuell sein sollte.<br>
+        Unter der Rubrik <b>"Einstellungen Design > Anzahl Zeichen"</b> kann die L&auml;nge der max. Zeichen in der LastNews und LastForum Box eingestellt werden. Je nach Template Breite und Schriftgr&ouml;&szlig;e sollte der Wert angepasst werden.<br>
+        Neben <b>Einstellungen DropDown Men&uuml;</b> siehst du den Button <b>"zur Verwaltung der Men&uuml;eintrage"</b>. &Uuml;ber diesen kommst du zu dem extra angelegtem 6. Men&uuml; in der Navigation. Dort kann das Men&uuml; verwaltet werden.Allerdings sollten es 6 Men&uuml;´s bleiben!<br>
+				</span>
+</div></td>
+</tr></table>
