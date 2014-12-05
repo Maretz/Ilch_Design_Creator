@@ -1,5 +1,5 @@
 Ilch_Design_Creator v.1.0 - Ilch 1.1p
-_____________________________________
+-------------------------------------
 
 Setze deine eigenen Vorstellungen an der Vorlage um.
 Neben Farbwerte und Maßangaben können noch weitere Änderungen vorgenommen werden.
