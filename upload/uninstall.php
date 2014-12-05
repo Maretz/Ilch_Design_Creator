@@ -19,7 +19,7 @@ if ( empty ($_POST['step']) ) { ?>
     <legend><h4><img style="float:left;margin-right:7px;" src="http://www.maretz.eu/icon.ico">  Design Creator <small>by <a href="http://www.maretz.eu" target="_blank"><strong>Maretz.eu</strong></a></small></h4></legend>
 <p>Um das Modul zu entfernen dr&uuml;cke auf <strong>Modul l&ouml;schen</strong></p>
 <br><br>
-<p class="text-center"><input class="btn btn-danger" type="submit" value="Modul l&ouml;schen"> <a class="btn btn-default" href="index.php?">Modul nicht löschen</a>
+<p class="text-center"><input class="btn btn-danger" type="submit" value="Modul l&ouml;schen"> <a class="btn btn-default" href="index.php?">Modul nicht lÃ¶schen</a>
   </div>
 </div>
 </div>
@@ -64,7 +64,7 @@ $loesch = db_query($clean);
                         $erfolg = '<p>Die Deinstallation wurde erfolgreich abgeschlossen!</p>';
                     }
                     if(@unlink('uninstall.php') && @unlink('include/admin/designcreator.php') && @unlink('include/boxes/lastnews_creator.php') && @unlink('include/boxes/lastforum_creator.php') && @unlink('include/boxes/login_creator.php') && @unlink('include/boxes/style_creator.php')  && @unlink('include/images/icons/admin/dc.png') && @unlink('include/designs/mar_Creator/index.htm') && @unlink('include/designs/mar_Creator/style.css')  && @unlink('include/designs/mar_Creator/templates/user/boxen_login_creator.htm') && @unlink('include/admin/templates/designcreator.htm')) {
-                        $erfolg .= '<p></p><p>Diese Dateien von dem Modul wurden erfolgreich gel&ouml;scht.</p></p>Es muss nur noch der Ordner include/designs/mar_Creator gel&ouml;scht werden.</p>';
+                        $erfolg .= '<p></p><p>Diese Dateien von dem Modul wurden erfolgreich gel&ouml;scht.</p><p>Es muss nur noch der Ordner include/designs/mar_Creator gel&ouml;scht werden.</p>';
                     }
                     else {
                         $erfolg .= '<p class="text-danger">Die Installationsdateien konnten nicht automatisch gel&ouml;scht werden.Folgende Dateien sollten entfernt werden:</p><p class="text-danger"><i>uninstall.php</i><br><i>include/admin/designcreator.php</i><br><i>include/admin/templates/designcreator.htm</i><br><i>include/boxes/lastnews_creator.php</i><br><i>include/boxes/lastforum_creator.php</i><br><i>include/boxes/login_creator.php</i><br><i>include/boxes/style_creator.php</i><br><i>include/images/icons/admin/dc.png</i><br><i>Ordner include/designs/mar_Creator</i></p>';
