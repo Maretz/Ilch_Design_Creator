@@ -18,4 +18,7 @@ Genauere Änderungen an den Dateien können erfragt werden. :)
 Führe nun die install.php aus ( http://www.meine-seite.de/install.php ) und folge den Anweisungen.
 Es ist ein uninstaller vorhanden um das Modul wieder entfernen zu können.
 
+Im Anschluss muss noch das Design mar_Creator im Adminbereich in der Konfiguration ausgewählt werden.
+Einstellungen zum Design unter Module> Design Creator.
+
 
