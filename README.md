@@ -13,6 +13,7 @@ Lade alle Dateien aus dem Ordner upload nach include auf.
 Es werden folgende Dateien ersetzt:
 
 - include/includes/class/design.php
+- include/admin/menu.php
 - include/admin/templates/menu.htm
 
 Diese sind notwendig, da ein weiteres Menü in der Navigation angelegt wird.
