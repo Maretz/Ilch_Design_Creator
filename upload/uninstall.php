@@ -19,7 +19,7 @@ if ( empty ($_POST['step']) ) { ?>
     <legend><h4><img style="float:left;margin-right:7px;" src="http://www.maretz.eu/icon.ico">  Design Creator <small>by <a href="http://www.maretz.eu" target="_blank"><strong>Maretz.eu</strong></a></small></h4></legend>
 <p>Um das Modul zu entfernen dr&uuml;cke auf <strong>Modul l&ouml;schen</strong></p>
 <br><br>
-<p class="text-center"><input class="btn btn-danger" type="submit" value="Modul l&ouml;schen"> <a class="btn btn-default" href="index.php?">Modul nicht löschen</a>
+<p class="text-center"><input class="btn btn-danger" type="submit" value="Modul l&ouml;schen"> <a class="btn btn-default" href="index.php?">Modul nicht l&ouml;schen</a>
   </div>
 </div>
 </div>
