@@ -15,7 +15,7 @@ if ( empty ($_POST['step']) ) { ?>
 <div class="panel panel-warning" style="margin-top:20%">
   <div class="panel-body">
     <legend><h4><img style="float:left;margin-right:7px;" src="http://www.maretz.eu/icon.ico">  Design Creator <small>by <a href="http://www.maretz.eu" target="_blank"><strong>Maretz.eu</strong></a></small></h4></legend>
-<p>Mit dem Design Creator kannst du dir das Design nach deinen Vorstellungen anpassen in der Farbgebung sowie in der Gr&ouml;ße und weiteren M&ouml;glichkeiten.</p>
+<p>Mit dem Design Creator kannst du dir das Design nach deinen Vorstellungen anpassen in der Farbgebung sowie in der Gr&ouml;&szlig;e und weiteren M&ouml;glichkeiten.</p>
 <p><i class="fa fa-exclamation-triangle" style="color:#ff0000"></i> Lege dir zuerst eine <strong><a href="admin.php?backup" target="_blank"><i class="fa fa-external-link"></i> Sicherheits Kopie der Datenbank</a></strong> an.</p>
 <p>Dr&uuml;cke auf Installieren, um das Modul zu installieren.</p>
 <br><br>
