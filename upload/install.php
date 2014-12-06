@@ -91,7 +91,7 @@ foreach ( $sql_statements as $sql_statement ) {
                         $erfolg = '<p>Die Installation wurde erfolgreich abgeschlossen!</p>';
                     }
                     if(@unlink('install.php') && @unlink('install.sql') && @unlink('uninstall.php')) {
-                        $erfolg .= '<p></p><p>Die Installationsdateien wurden erfolgreich gel&ouml;scht. Es muss nichts mehr getan werden.</p><p class="text-warning">Um das Modul wieder zu l&ouml;schen muss nochmals die uninstall.php aufgespielt werden und über die URL ( http://meine-seite.de/uninstall.php ) aufgerufen werden!</p>';
+                        $erfolg .= '<p></p><p>Die Installationsdateien wurden erfolgreich gel&ouml;scht. Es muss nichts mehr getan werden.</p><p class="text-warning">Um das Modul wieder zu l&ouml;schen muss nochmals die uninstall.php aufgespielt werden und &uuml;ber die URL ( http://meine-seite.de/uninstall.php ) aufgerufen werden!</p>';
                     }
                     else {
                         $erfolg .= '<p class="text-danger">Die Installationsdateien konnten nicht automatisch gel&ouml;scht werden. L&ouml;sche folgende Dateien:<p><p class="text-danger"></strong><br /><br><i>install.php</i><br><i>install.sql</i><br><i>uninstall.php</i></p><p class="text-warning">Um das Modul wieder zu l&ouml;schen muss nochmals die uninstall.php aufgespielt werden und über die URL ( http://meine-seite.de/uninstall.php ) aufgerufen werden!</p>';
