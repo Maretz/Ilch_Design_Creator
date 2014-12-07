@@ -23,6 +23,9 @@ $dc->h3linehight = $dc->headerhight - 60 ;
 $dc->dropdownlinkhight = $dc->sizehtml + 8;
 $dc->smalfontsize = $dc->sizehtml - 2;
 $dc->tablekopfsize = $dc->sizehtml + 1;
+$dc->breitecontent2 = $dc->breitebodysite - $dc->menubreite - 8 ;
+$dc->breitecontentin2 = $dc->breitecontent2 - 10 ;
+$dc->breitecontentin3 = $dc->breitebodysite - 10 ;
 
 ?>
 
@@ -245,7 +248,33 @@ background-color: <?php echo ''.$dc->contentbackground.''?>;
 -moz-box-shadow:     <?php echo ''.$dc->boxschatten.''?> <?php echo ''.$dc->boxschattencolor.''?>;
 box-shadow:          <?php echo ''.$dc->boxschatten.''?> <?php echo ''.$dc->boxschattencolor.''?>;
 }
+#content_bereich_2    
+{
+width: <?php echo ''.$dc->breitecontent2.''?>px;
+border: solid <?php echo ''.$dc->boxenborder.''?> 1px;
+-webkit-border-radius: <?php echo ''.$dc->boxenradius.''?>px;
+-moz-border-radius: <?php echo ''.$dc->boxenradius.''?>px;
+border-radius: <?php echo ''.$dc->boxenradius.''?>px;
+background-color: <?php echo ''.$dc->contentbackground.''?>;
+-webkit-box-shadow:  <?php echo ''.$dc->boxschatten.''?> <?php echo ''.$dc->boxschattencolor.''?>;
+-moz-box-shadow:     <?php echo ''.$dc->boxschatten.''?> <?php echo ''.$dc->boxschattencolor.''?>;
+box-shadow:          <?php echo ''.$dc->boxschatten.''?> <?php echo ''.$dc->boxschattencolor.''?>;
+}
+#content_bereich_3    
+{
+width: <?php echo ''.$dc->breitebodysite.''?>px;
+border: solid <?php echo ''.$dc->boxenborder.''?> 1px;
+-webkit-border-radius: <?php echo ''.$dc->boxenradius.''?>px;
+-moz-border-radius: <?php echo ''.$dc->boxenradius.''?>px;
+border-radius: <?php echo ''.$dc->boxenradius.''?>px;
+background-color: <?php echo ''.$dc->contentbackground.''?>;
+-webkit-box-shadow:  <?php echo ''.$dc->boxschatten.''?> <?php echo ''.$dc->boxschattencolor.''?>;
+-moz-box-shadow:     <?php echo ''.$dc->boxschatten.''?> <?php echo ''.$dc->boxschattencolor.''?>;
+box-shadow:          <?php echo ''.$dc->boxschatten.''?> <?php echo ''.$dc->boxschattencolor.''?>;
+}
 .content_in         {width: <?php echo ''.$dc->breitecontentin.''?>px;max-width: <?php echo ''.$dc->breitecontentin.''?>px;}
+.content_in_2         {width: <?php echo ''.$dc->breitecontentin2.''?>px;max-width: <?php echo ''.$dc->breitecontentin2.''?>px;}
+.content_in_3         {width: <?php echo ''.$dc->breitecontentin3.''?>px;max-width: <?php echo ''.$dc->breitecontentin3.''?>px;}
 #ddmenu li a {
 color:<?php echo ''.$dc->dropdownname.''?>;
 font-size:<?php echo ''.$dc->dropdownnamesize.''?>px;

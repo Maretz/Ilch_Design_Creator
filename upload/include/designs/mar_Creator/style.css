@@ -89,7 +89,6 @@ line-height:50px
 #bg_content
 {
 float:left;
-border: none;
 margin-top:5px
 }
 #linke_box, #rechte_box    
@@ -112,11 +111,25 @@ border: none;
 text-align:center;
 margin-bottom:10px
 }
-#content_bereich            
+#content_bereich
 {
 float: left;
 margin-left:6px;
 margin-right:5px;
+min-height:100px;
+margin-bottom:10px;
+}
+#content_bereich_2 
+{
+float: right;
+margin-left:6px;
+margin-right:0px;
+min-height:100px;
+margin-bottom:10px;
+}
+#content_bereich_3 
+{
+float: left;
 min-height:100px;
 margin-bottom:10px;
 }
@@ -131,7 +144,9 @@ padding-bottom: 5px;
 overflow: hidden;
 text-align:center
 }
-.content_in 
+.content_in,
+.content_in_2,
+.content_in_3
 {
 float: left;
 padding-top: 5px;
